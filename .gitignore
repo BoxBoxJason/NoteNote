@@ -38,6 +38,7 @@ build/
 .gitattributes
 .gitmodules
 .gitkeep
+.gitignore
 
 # IDE files
 .vscode/

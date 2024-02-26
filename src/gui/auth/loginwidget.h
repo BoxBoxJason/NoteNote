@@ -1,0 +1,30 @@
+#ifndef GUI_AUTH_LOGINWIDGET_H
+#define GUI_AUTH_LOGINWIDGET_H
+
+#include <QWidget>
+#include <QLineEdit>
+
+class LoginWidget : public QWidget
+{
+    Q_OBJECT
+
+public:
+    LoginWidget(QWidget* parent = nullptr);
+    ~LoginWidget();
+
+public slots:
+    void clean();
+
+private:
+    QLineEdit* email_or_username_line_edit;
+    QLineEdit* password_line_edit;
+
+private slots:
+    void loginClicked();
+
+signals:
+    void loggedIn(int user_id);
+
+};
+
+#endif // GUI_AUTH_LOGINWIDGET_H
