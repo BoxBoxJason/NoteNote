@@ -16,14 +16,16 @@ public slots:
     void clean();
 
 private:
-    QLineEdit* email_or_username_line_edit;
+    QLineEdit* email_line_edit;
     QLineEdit* password_line_edit;
 
 private slots:
     void loginClicked();
+    void resetInputStyle();
 
 signals:
-    void loggedIn(int user_id);
+    void signIn(int user_id);
+    void error(const QString& message);
 
 };
 
