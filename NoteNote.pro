@@ -1,4 +1,4 @@
-QT       += core gui widgets
+QT       += core gui widgets sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,10 +16,8 @@ SOURCES += \
     src/gui/auth/registerwidget.cpp \
     src/gui/navigation/navigationbar.cpp \
     src/gui/navigation/pagesmanagerwidget.cpp \
-    src/gui/pages/activities/activitieswidget.cpp \
     src/gui/pages/activities/graded/gradedactivitieswidget.cpp \
     src/gui/pages/activities/ungraded/ungradedactivitieswidget.cpp \
-    src/gui/pages/assiduity/assiduitywidget.cpp \
     src/gui/pages/assiduity/absences/absenceswidget.cpp \
     src/gui/pages/assiduity/lates/lateswidget.cpp \
     src/gui/pages/grades/gradeswidget.cpp \
@@ -29,7 +27,12 @@ SOURCES += \
     src/gui/pages/schedules/scheduleswidget.cpp \
     src/gui/pages/students/studentswidget.cpp \
     src/gui/pages/themes/themeswidget.cpp \
-
+    src/controllers/initdb.cpp \
+    src/controllers/userscontroller.cpp \
+    src/models/general.cpp \
+    src/models/usersmodel.cpp \
+    src/utils/authutils.cpp \
+    src/gui/utils/pageswitcher.cpp
 
 HEADERS += \
     src/gui/notenote.h \
@@ -38,10 +41,8 @@ HEADERS += \
     src/gui/auth/registerwidget.h \
     src/gui/navigation/navigationbar.h \
     src/gui/navigation/pagesmanagerwidget.h \
-    src/gui/pages/activities/activitieswidget.h \
     src/gui/pages/activities/graded/gradedactivitieswidget.h \
     src/gui/pages/activities/ungraded/ungradedactivitieswidget.h \
-    src/gui/pages/assiduity/assiduitywidget.h \
     src/gui/pages/assiduity/absences/absenceswidget.h \
     src/gui/pages/assiduity/lates/lateswidget.h \
     src/gui/pages/grades/gradeswidget.h \
@@ -50,7 +51,15 @@ HEADERS += \
     src/gui/pages/sanctions/sanctionswidget.h \
     src/gui/pages/schedules/scheduleswidget.h \
     src/gui/pages/students/studentswidget.h \
-    src/gui/pages/themes/themeswidget.h
+    src/gui/pages/themes/themeswidget.h \
+    src/controllers/initdb.h \
+    src/controllers/userscontroller.h \
+    src/models/general.h \
+    src/models/usersmodel.h \
+    src/utils/authutils.h \
+    src/utils/exceptions.h \
+    src/gui/utils/pageswitcher.h
+
 
 TRANSLATIONS += \
     NoteNote_fr_FR.ts

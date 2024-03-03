@@ -1,9 +1,9 @@
 #ifndef GUI_PAGES_ASSIDUITY_ABSENCES_ABSENCESWIDGET_H
 #define GUI_PAGES_ASSIDUITY_ABSENCES_ABSENCESWIDGET_H
 
-#include "../assiduitywidget.h"
+#include <QWidget>
 
-class AbsencesWidget : public AssiduityWidget
+class AbsencesWidget : public QWidget
 {
     Q_OBJECT
 

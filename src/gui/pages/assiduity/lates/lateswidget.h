@@ -1,9 +1,9 @@
 #ifndef GUI_PAGES_ASSIDUITY_LATES_LATESWIDGET_H
 #define GUI_PAGES_ASSIDUITY_LATES_LATESWIDGET_H
 
-#include "../assiduitywidget.h"
+#include <QWidget>
 
-class LatesWidget : public AssiduityWidget
+class LatesWidget : public QWidget
 {
     Q_OBJECT
 

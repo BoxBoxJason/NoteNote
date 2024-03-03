@@ -11,7 +11,7 @@ class PageSwitcher : public QWidget
     Q_OBJECT
 
 public:
-    PageSwitcher(QWidget* parent = nullptr, const QStringList& pages_names);
+    PageSwitcher(QWidget* parent = nullptr, const QStringList& pages_names=QStringList());
     ~PageSwitcher();
 
 private:

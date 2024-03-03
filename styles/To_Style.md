@@ -7,6 +7,7 @@
 
 ### QPushButton
 - PageSwitcher
+- auth_submit_button
 
 ### QLineEdit
 - auth_input

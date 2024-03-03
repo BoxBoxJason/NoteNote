@@ -1,14 +1,16 @@
-#ifndef UTILS_UTILS_H
-#define UTILS_UTILS_H
+#ifndef UTILS_AUTHUTILS_H
+#define UTILS_AUTHUTILS_H
 
 #include <QString>
 
 namespace AuthUtils {
-    QString generateSalt();
+    QString generateRandomSalt();
     QString hashPassword(const QString& password, const QString& salt);
     bool checkEmailFormat(const QString& email);
     bool checkPasswordFormat(const QString& password);
     bool checkNameFormat(const QString& name);
+    bool checkPasswordMatchesHash(const QString& password, const QString& hashed_password, const QString& salt);
+
 }
 
-#endif // UTILS_UTILS_H
+#endif // UTILS_AUTHUTILS_H

@@ -1,1 +1,10 @@
-#include "ungradedactivitieswidget.h"
+#include "gradedactivitieswidget.h"
+
+
+GradedActivitiesWidget::GradedActivitiesWidget(QWidget* parent)
+    : QWidget(parent) {
+}
+
+
+GradedActivitiesWidget::~GradedActivitiesWidget() {
+}

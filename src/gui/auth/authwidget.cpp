@@ -6,49 +6,42 @@
 
 AuthWidget::AuthWidget(QWidget* parent) : QWidget(parent) {
     // Header label
-    QVBoxLayout layout(this);
-    QLabel label(tr("Welcome to NoteNote !"));
-    label.setObjectName("welcome_label");
-    layout.addWidget(&label,0,Qt::AlignTop | Qt::AlignHCenter);
+    QVBoxLayout* layout = new QVBoxLayout(this);
+    QLabel* label = new QLabel(tr("Welcome to NoteNote !"));
+    label->setObjectName("welcome_label");
+    layout->addWidget(label,0,Qt::AlignTop | Qt::AlignHCenter);
 
-    QStackedLayout stacked_layout_instance(this);
-    stacked_layout = &stacked_layout_instance;
+    stacked_layout = new QStackedLayout(this);
 
     // Add page switcher (and connect it to stacked layout)
-    PageSwitcher page_switcher(this, QStringList{tr("Login"), tr("Register")});
-    layout.addWidget(&page_switcher);
+    PageSwitcher* page_switcher = new PageSwitcher(this, QStringList{tr("Login"), tr("Register")});
+    layout->addWidget(page_switcher);
 
     // Add error display label
-    QLabel error_display_label_instance(this);
-    error_display_label = &error_display_label_instance;
+    error_display_label = new QLabel(this);
     error_display_label->setObjectName("error_display_label");
     error_display_label->setWordWrap(true);
     error_display_label->setVisible(false);
-    layout.addWidget(error_display_label,0,Qt::AlignTop | Qt::AlignHCenter);
+    layout->addWidget(error_display_label,0,Qt::AlignTop | Qt::AlignHCenter);
 
     // Create register and login widgets
-    LoginWidget login_widget_instance(this);
-    login_widget = &login_widget_instance;
+    login_widget = new LoginWidget(this);
     stacked_layout->addWidget(login_widget);
     connect(login_widget, &LoginWidget::signIn, this, &AuthWidget::authSuccess);
 
-    RegisterWidget register_widget_instance(this);
-    register_widget = &register_widget_instance;
+    register_widget = new RegisterWidget(this);
     stacked_layout->addWidget(register_widget);
     connect(register_widget, &RegisterWidget::signUp, this, &AuthWidget::authSuccess);
 
-    connect(&page_switcher, &PageSwitcher::changePage, stacked_layout, &QStackedLayout::setCurrentIndex);
+    connect(page_switcher, &PageSwitcher::changePage, stacked_layout, &QStackedLayout::setCurrentIndex);
 
     // Add Login and Register stacked layout
-    layout.addLayout(stacked_layout);
-    setLayout(&layout);
+    layout->addLayout(stacked_layout);
+    setLayout(layout);
 }
 
 
 AuthWidget::~AuthWidget() {
-    setParent(nullptr);
-    delete login_widget;
-    delete register_widget;
 }
 
 

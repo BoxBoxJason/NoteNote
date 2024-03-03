@@ -2,6 +2,7 @@
 #define GUI_NAVIGATION_PAGESMANAGERWIDGET_H
 
 #include <QWidget>
+#include <QStackedLayout>
 #include "../pages/schedules/scheduleswidget.h"
 #include "../pages/students/studentswidget.h"
 #include "../pages/grades/gradeswidget.h"
@@ -22,11 +23,15 @@ public:
     PagesManagerWidget(QWidget* parent = nullptr);
     ~PagesManagerWidget();
 
-private slots:
-    void login(int user_id);
+public slots:
     void logout();
 
+private slots:
+    void login(int user_id);
+
 private:
+    int user_id=-1;
+    QStackedLayout* stacked_layout;
     SchedulesWidget* schedules_widget;
     StudentsWidget* students_widget;
     GradesWidget* grades_widget;

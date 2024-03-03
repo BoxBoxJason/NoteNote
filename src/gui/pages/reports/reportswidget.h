@@ -13,7 +13,6 @@ public:
     ~ReportsWidget();
 
 public slots:
-    void setTeacherId(int teacher_id);
 
 private:
     void showStudentReport(int student_id, int year_id, int trimester_id);

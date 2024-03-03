@@ -1,1 +1,0 @@
-#include "assiduitywidget.h"

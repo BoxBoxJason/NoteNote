@@ -1,9 +1,9 @@
 #ifndef GUI_PAGES_ACTIVITIES_GRADED_GRADEDACTIVITIESWIDGET_H
 #define GUI_PAGES_ACTIVITIES_GRADED_GRADEDACTIVITIESWIDGET_H
 
-#include "../activitieswidget.h"
+#include <QWidget>
 
-class GradedActivitiesWidget : public ActivitiesWidget
+class GradedActivitiesWidget : public QWidget
 {
     Q_OBJECT
 

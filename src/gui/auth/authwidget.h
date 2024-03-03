@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QStackedLayout>
+#include <QLabel>
 #include "loginwidget.h"
 #include "registerwidget.h"
 
