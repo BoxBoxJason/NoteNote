@@ -32,6 +32,7 @@ SOURCES += \
     src/models/general.cpp \
     src/models/usersmodel.cpp \
     src/utils/authutils.cpp \
+    src/utils/logger.cpp \
     src/gui/utils/pageswitcher.cpp
 
 HEADERS += \
@@ -57,7 +58,8 @@ HEADERS += \
     src/models/general.h \
     src/models/usersmodel.h \
     src/utils/authutils.h \
-    src/utils/exceptions.h \
+    src/utils/exceptions.hpp \
+    src/utils/logger.h \
     src/gui/utils/pageswitcher.h
 
 

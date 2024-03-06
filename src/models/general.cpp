@@ -64,13 +64,15 @@ namespace GeneralModel {
         QHash<QString,QVariant> row;
 
         if(query.exec()){
-            if (!fields.isEmpty()){
-                for (auto it = field_names.begin(); it != field_names.end(); ++it) {
-                    row[*it] = query.value(*it);
-                }
-            } else {
-                for (int i = 0; i < query.record().count(); ++i) {
-                    row[query.record().fieldName(i)] = query.value(i);
+            if (query.first()) {
+                if (!fields.isEmpty()){
+                    for (auto it = field_names.begin(); it != field_names.end(); ++it) {
+                        row[*it] = query.value(*it);
+                    }
+                } else {
+                    for (int i = 0; i < query.record().count(); ++i) {
+                        row[query.record().fieldName(i)] = query.value(i);
+                    }
                 }
             }
         } else {
@@ -103,13 +105,15 @@ namespace GeneralModel {
 
         QHash<QString,QVariant> row;
         if(query.exec()){
-            if (!fields.isEmpty()){
-                for (auto it = field_names.begin(); it != field_names.end(); ++it) {
-                    row[*it] = query.value(*it);
-                }
-            } else {
-                for (int i = 0; i < query.record().count(); ++i) {
-                    row[query.record().fieldName(i)] = query.value(i);
+            if (query.first()) {
+                if (!fields.isEmpty()){
+                    for (auto it = field_names.begin(); it != field_names.end(); ++it) {
+                        row[*it] = query.value(*it);
+                    }
+                } else {
+                    for (int i = 0; i < query.record().count(); ++i) {
+                        row[query.record().fieldName(i)] = query.value(i);
+                    }
                 }
             }
         } else {

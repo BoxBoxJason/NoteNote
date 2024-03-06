@@ -1,0 +1,3 @@
+NoteNote {
+    background-color: @MAIN_BG_COLOR@;
+}

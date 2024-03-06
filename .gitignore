@@ -42,3 +42,25 @@ build/
 
 # IDE files
 .vscode/
+
+# Other files
+*.log
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.db-shm
+*.db-wal
+*.db-journal
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.gz
+*.bzip
+*.tar
+*.tar.*
+*.dmg

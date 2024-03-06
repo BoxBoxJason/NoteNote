@@ -5,7 +5,7 @@
 
 namespace InitDBController {
     // ====== Database initialization functions ====== //
-    void initDB(QSqlDatabase& db);
+    void initDB();
     QSqlDatabase openDB();
 
     // ====== Table creation functions ====== //

@@ -2,6 +2,7 @@
 #define GUI_NOTENOTE_H
 
 #include <QMainWindow>
+#include <QCloseEvent>
 #include "./navigation/navigationbar.h"
 #include "./navigation/pagesmanagerwidget.h"
 
@@ -16,6 +17,9 @@ public:
 private:
     NavigationBar* navigation_bar;
     PagesManagerWidget* pages_manager;
+
+protected:
+    void closeEvent(QCloseEvent* event);
 };
 
 #endif // GUI_NOTENOTE_H
