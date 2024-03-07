@@ -28,11 +28,14 @@ AuthWidget::AuthWidget(QWidget* parent) : QWidget(parent) {
     login_widget = new LoginWidget(this);
     stacked_layout->addWidget(login_widget);
     connect(login_widget, &LoginWidget::signIn, this, &AuthWidget::authSuccess);
+    connect(login_widget, &LoginWidget::error, this, &AuthWidget::showError);
 
     register_widget = new RegisterWidget(this);
     stacked_layout->addWidget(register_widget);
     connect(register_widget, &RegisterWidget::signUp, this, &AuthWidget::authSuccess);
+    connect(register_widget, &RegisterWidget::error, this, &AuthWidget::showError);
 
+    connect(page_switcher, &PageSwitcher::changePage, this, &AuthWidget::clean);
     connect(page_switcher, &PageSwitcher::changePage, stacked_layout, &QStackedLayout::setCurrentIndex);
 
     // Add Login and Register stacked layout

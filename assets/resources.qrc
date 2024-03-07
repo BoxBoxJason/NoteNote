@@ -2,7 +2,24 @@
     <qresource>
         <file>images/logo.png</file>
         <file>images/logo_bg.png</file>
+        
+        <file>icons/reports.png</file>
+        <file>icons/absences.png</file>
+        <file>icons/checkmark.png</file>
+        <file>icons/gradedactivities.png</file>
+        <file>icons/lates.png</file>
+        <file>icons/lessons.png</file>
+        <file>icons/sanctions.png</file>
+        <file>icons/schedules.png</file>
+        <file>icons/ungradedactivities.png</file>
+        <file>icons/logout.png</file>
+        <file>icons/grades.png</file>
+        <file>icons/settings.png</file>
+        <file>icons/themes.png</file>
+        <file>icons/students.png</file>
+
         <file>styles/notenote.qss</file>
         <file>styles/variables.json</file>
+        <file>styles/toolbar.json</file>
     </qresource>
 </RCC>
