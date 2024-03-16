@@ -1,5 +1,5 @@
-#ifndef UTILS_EXCEPTIONS_H
-#define UTILS_EXCEPTIONS_H
+#ifndef UTILS_EXCEPTIONS_HPP
+#define UTILS_EXCEPTIONS_HPP
 
 #include <QString>
 #include <QException>
@@ -14,4 +14,4 @@ private:
     QString m_message;
 };
 
-#endif // UTILS_EXCEPTIONS_H
+#endif // UTILS_EXCEPTIONS_HPP
