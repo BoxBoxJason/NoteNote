@@ -1,9 +1,9 @@
 #include <QGridLayout>
 #include "classtrimestersubjectpicker.h"
-#include "../../controllers/classescontroller.h"
-#include "../../utils/formatutils.h"
+#include "../../../controllers/classescontroller.h"
+#include "../../../utils/formatutils.h"
 
-static const QHash<QString,QStringList> DIVISIONS = {
+const QHash<QString,QStringList> DIVISIONS = {
     {"trimester", {"T1", "T2", "T3"}},
     {"semester", {"S1", "S2"}}
 };
@@ -53,14 +53,15 @@ ClassTrimesterSubjectPicker::~ClassTrimesterSubjectPicker() {
 }
 
 
-void ClassTrimesterSubjectPicker::classSelected(const QString& class_id) {
+void ClassTrimesterSubjectPicker::classSelected(const QString& class_name) {
     subject_picker->clear();
     division_picker->clear();
 
-    if (! class_id.isEmpty()){
-        subject_picker->addItems(ClassesController::getSubjects(class_id));
+    if (! class_name.isEmpty()){
+        QHash<QString,QVariant> class_data = ClassesController::getClassSubjectsAndDivision(class_name);
+        subject_picker->addItems(FormatUtils::formatStringList(class_data["subjects"].toString()));
 
-        QString division = ClassesController::getDivision(class_id);
+        QString division = class_data["division"].toString();
         division_label->setText(FormatUtils::capitalize(division));
         division_picker->addItems(DIVISIONS[division]);
     }
