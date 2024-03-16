@@ -33,7 +33,11 @@ SOURCES += \
     src/models/usersmodel.cpp \
     src/utils/authutils.cpp \
     src/utils/logger.cpp \
-    src/gui/utils/pageswitcher.cpp
+    src/gui/utils/pageswitcher.cpp \
+    src/gui/pages/grades/classtrimestersubjectpicker.cpp \
+    src/utils/formatutils.cpp \
+    src/models/classesmodel.cpp \
+    src/controllers/classescontroller.cpp
 
 HEADERS += \
     src/gui/notenote.h \
@@ -60,8 +64,12 @@ HEADERS += \
     src/utils/authutils.h \
     src/utils/exceptions.hpp \
     src/utils/logger.h \
-    src/gui/utils/pageswitcher.h
-
+    src/gui/utils/pageswitcher.h \
+    src/gui/pages/grades/classtrimestersubjectpicker.h \
+    src/utils/sessionmanager.hpp \
+    src/utils/formatutils.h \
+    src/models/classesmodel.h \
+    src/controllers/classescontroller.h
 
 TRANSLATIONS += \
     NoteNote_fr_FR.ts
