@@ -6,12 +6,12 @@
 #include <QVariantList>
 #include "general.h"
 #include "../controllers/initdb.h"
+#include "../utils/sessionmanager.hpp"
 
 namespace GeneralModel {
 
     int createTableRow(const QString& table_name, const QHash<QString,QVariant>& fields) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         for (auto it = fields.begin(); it != fields.end(); ++it) {
             field_names << it.key();
@@ -26,14 +26,12 @@ namespace GeneralModel {
             row_id = query.lastInsertId().toInt();
         }
 
-        db.close();
         return row_id;
     }
 
 
     bool setTableRowFields(const QString& table_name, int row_id, const QHash<QString,QVariant>& fields) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         for (auto it = fields.begin(); it != fields.end(); ++it) {
             field_names << it.key() + " = :" + it.key();
@@ -44,14 +42,13 @@ namespace GeneralModel {
         }
         query.bindValue(":id", row_id);
         bool success = query.exec();
-        db.close();
+
         return success;
     }
 
 
     QHash<QString,QVariant> getTableRow(const QString& table_name, int row_id, const QStringList& fields) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         if (fields.isEmpty()) {
             field_names << "*";
@@ -78,14 +75,12 @@ namespace GeneralModel {
         } else {
             row["error"] = query.lastError().text();
         }
-        db.close();
         return row;
     }
 
 
     QHash<QString,QVariant> getTableRow(const QString& table_name, const QHash<QString,QVariant>& filters, const QStringList& fields) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         if (fields.isEmpty()) {
             field_names << "*";
@@ -119,7 +114,7 @@ namespace GeneralModel {
         } else {
             row["error"] = query.lastError().text();
         }
-        db.close();
+
         return row;
     }
 
@@ -137,8 +132,7 @@ namespace GeneralModel {
 
 
     QHash<int,QHash<QString,QVariant>> getTableRows(const QString& table_name, const QVector<int>& row_ids, const QStringList& fields){
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
 
         QStringList field_names;
         if (fields.isEmpty()) {
@@ -175,14 +169,12 @@ namespace GeneralModel {
             rows[-1] = row;
         }
 
-        db.close();
         return rows;
     }
 
 
     QHash<int,QHash<QString,QVariant>> getTableRows(const QString& table_name,const QHash<QString,QVariant>& filters, const QStringList& fields) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         if (fields.isEmpty()) {
             field_names << "*";
@@ -221,14 +213,12 @@ namespace GeneralModel {
             rows[-1] = row;
         }
 
-        db.close();
         return rows;
     }
 
 
     QVector<QHash<QString,QVariant>> getTableOrderedRows(const QString& table_name, const QString& order_by, const QHash<QString,QVariant>& filters, const QStringList& fields,const QString& order){
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         if (fields.isEmpty()) {
             field_names << "*";
@@ -266,14 +256,13 @@ namespace GeneralModel {
             row["error"] = query.lastError().text();
             rows.append(row);
         }
-        db.close();
+
         return rows;
     }
 
 
     QHash<int,QHash<QString,QVariant>> getTableRowsPartialFilter(const QString& table_name, const QString& filter_name, const QString& value, const QStringList& fields) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList field_names;
         if (fields.isEmpty()) {
             field_names << "*";
@@ -304,25 +293,23 @@ namespace GeneralModel {
             row["error"] = query.lastError().text();
             rows[-1] = row;
         }
-        db.close();
+
         return rows;
     }
 
 
     bool deleteTableRow(const QString& table_name, int row_id) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         query.prepare("DELETE FROM " + table_name + " WHERE id = :id");
         query.bindValue(":id", row_id);
         bool success = query.exec();
-        db.close();
+
         return success;
     }
 
 
     bool deleteTableRows(const QString& table_name, const QHash<QString,QVariant>& filters) {
-        QSqlDatabase db = InitDBController::openDB();
-        QSqlQuery query;
+        QSqlQuery query(DatabaseManager::instance().getDatabase());
         QStringList filter_names;
         for (auto it = filters.begin(); it != filters.end(); ++it) {
             filter_names << it.key() + " = :" + it.key();
@@ -332,7 +319,7 @@ namespace GeneralModel {
             query.bindValue(":" + it.key(), it.value());
         }
         bool success = query.exec();
-        db.close();
+
         return success;
     }
 
