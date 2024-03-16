@@ -10,6 +10,7 @@ class LessonsWidget : public QWidget
 public:
     LessonsWidget(QWidget* parent = nullptr);
     ~LessonsWidget();
+
 };
 
 #endif // GUI_PAGES_LESSONS_LESSONSWIDGET_H

@@ -10,6 +10,7 @@ class LatesWidget : public QWidget
 public:
     LatesWidget(QWidget* parent = nullptr);
     ~LatesWidget();
+
 };
 
 #endif // GUI_PAGES_ASSIDUITY_LATES_LATESWIDGET_H

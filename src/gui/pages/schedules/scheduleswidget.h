@@ -15,8 +15,6 @@ public:
     SchedulesWidget(QWidget* parent = nullptr);
     ~SchedulesWidget();
 
-public slots:
-
 private:
     QStackedLayout* stacked_layout;
     WeekView* week_view;

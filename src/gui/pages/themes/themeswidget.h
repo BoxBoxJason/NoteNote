@@ -10,6 +10,7 @@ class ThemesWidget : public QWidget
 public:
     ThemesWidget(QWidget* parent = nullptr);
     ~ThemesWidget();
+
 };
 
 #endif // GUI_PAGES_THEMES_THEMESWIDGET_H

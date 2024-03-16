@@ -12,8 +12,6 @@ public:
     ReportsWidget(QWidget* parent = nullptr);
     ~ReportsWidget();
 
-public slots:
-
 private:
     void showStudentReport(int student_id, int year_id, int trimester_id);
 };

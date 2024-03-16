@@ -10,6 +10,7 @@ class GradedActivitiesWidget : public QWidget
 public:
     GradedActivitiesWidget(QWidget* parent = nullptr);
     ~GradedActivitiesWidget();
+
 };
 
 #endif // GUI_PAGES_ACTIVITIES_GRADED_GRADEDACTIVITIESWIDGET_H

@@ -10,6 +10,7 @@ class AbsencesWidget : public QWidget
 public:
     AbsencesWidget(QWidget* parent = nullptr);
     ~AbsencesWidget();
+
 };
 
 #endif // GUI_PAGES_ASSIDUITY_ABSENCES_ABSENCESWIDGET_H

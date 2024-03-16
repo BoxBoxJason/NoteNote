@@ -10,6 +10,7 @@ class GradesWidget : public QWidget
 public:
     GradesWidget(QWidget* parent = nullptr);
     ~GradesWidget();
+
 };
 
 #endif // GUI_PAGES_GRADES_GRADESWIDGET_H

@@ -10,6 +10,7 @@ class SanctionsWidget : public QWidget
 public:
     SanctionsWidget(QWidget* parent = nullptr);
     ~SanctionsWidget();
+
 };
 
 #endif // GUI_PAGES_SANCTIONS_SANCTIONSWIDGET_H
