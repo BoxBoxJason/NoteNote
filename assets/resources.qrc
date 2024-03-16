@@ -17,6 +17,7 @@
         <file>icons/settings.png</file>
         <file>icons/themes.png</file>
         <file>icons/students.png</file>
+        <file>icons/login.png</file>
 
         <file>styles/notenote.qss</file>
         <file>styles/variables.json</file>

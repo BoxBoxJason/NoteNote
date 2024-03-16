@@ -1,3 +1,7 @@
 NoteNote {
     background-color: @MAIN_BG_COLOR@;
 }
+
+* {
+    border: 2px solid red;
+}
