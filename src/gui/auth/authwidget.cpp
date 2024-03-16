@@ -11,11 +11,11 @@ AuthWidget::AuthWidget(QWidget* parent) : QWidget(parent) {
     label->setObjectName("welcome_label");
     layout->addWidget(label,0,Qt::AlignTop | Qt::AlignHCenter);
 
-    stacked_layout = new QStackedLayout(this);
+    stacked_layout = new QStackedLayout();
 
     // Add page switcher (and connect it to stacked layout)
     PageSwitcher* page_switcher = new PageSwitcher(this, QStringList{tr("Login"), tr("Register")});
-    layout->addWidget(page_switcher);
+    layout->addWidget(page_switcher,0,Qt::AlignBottom | Qt::AlignHCenter);
 
     // Add error display label
     error_display_label = new QLabel(this);
