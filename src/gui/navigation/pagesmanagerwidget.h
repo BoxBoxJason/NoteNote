@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QStackedLayout>
+#include <QMap>
 #include "../pages/schedules/scheduleswidget.h"
 #include "../pages/students/studentswidget.h"
 #include "../pages/grades/gradeswidget.h"
@@ -24,26 +25,27 @@ public:
     ~PagesManagerWidget();
 
 public slots:
-    void logout();
+    void changePage(const QString& page_name);
 
 private slots:
     void login(int user_id);
 
 private:
-    int user_id=-1;
+    QString current_page="auth";
     QStackedLayout* stacked_layout;
-    SchedulesWidget* schedules_widget;
-    StudentsWidget* students_widget;
-    GradesWidget* grades_widget;
-    ReportsWidget* reports_widget;
-    LessonsWidget* lessons_widget;
-    ThemesWidget* themes_widget;
-    GradedActivitiesWidget* graded_activities_widget;
-    UngradedActivitiesWidget* ungraded_activities_widget;
-    AbsencesWidget* absences_widget;
-    LatesWidget* lates_widget;
     AuthWidget* auth_widget;
-
+    const QMap<QString, std::function<QWidget*()>> WIDGET_MAP = {
+        {"schedules", [this](){ return new SchedulesWidget(this); }},
+        {"students", [this](){ return new StudentsWidget(this); }},
+        {"grades", [this](){ return new GradesWidget(this); }},
+        {"reports", [this](){ return new ReportsWidget(this); }},
+        {"lessons", [this](){ return new LessonsWidget(this); }},
+        {"themes", [this](){ return new ThemesWidget(this); }},
+        {"graded_activities", [this](){ return new GradedActivitiesWidget(this); }},
+        {"ungraded_activities", [this](){ return new UngradedActivitiesWidget(this); }},
+        {"absences", [this](){ return new AbsencesWidget(this); }},
+        {"lates", [this](){ return new LatesWidget(this); }}
+    };
 };
 
 #endif // GUI_NAVIGATION_PAGESMANAGERWIDGET_H

@@ -18,7 +18,7 @@ NavigationBar::NavigationBar(QWidget* parent) : QToolBar(parent) {
             QAction* action = new QAction(this);
             action->setIcon(QIcon(action_dict.value("icon").toString()));
             action->setToolTip(tr(action_dict.value("tooltip").toString().toUtf8()));
-            QString action_slug = action_dict.value("action").toString();
+            QString action_slug = action_dict.value("slug").toString();
             connect(action, &QAction::triggered, this, [this, action_slug]() { emit changePage(action_slug); });
             addAction(action);
         }
@@ -37,7 +37,7 @@ NavigationBar::NavigationBar(QWidget* parent) : QToolBar(parent) {
         login_out_action = new QAction(this);
         login_out_action->setIcon(QIcon(":icons/login.png"));
         login_out_action->setToolTip(tr("Log in"));
-        connect(login_out_action, &QAction::triggered, this, [this]() { emit logout(); });
+        connect(login_out_action, &QAction::triggered, this, [this]() { emit changePage("auth"); });
         addAction(login_out_action);
 
     } else {

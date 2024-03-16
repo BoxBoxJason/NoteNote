@@ -18,8 +18,7 @@ private:
     QAction* login_out_action;
 
 signals:
-    void changePage(const QString& page_name);
-    void logout();
+    void changePage(const QString& page_name);    
 
 };
 
