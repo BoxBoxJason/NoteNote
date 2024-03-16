@@ -5,6 +5,7 @@
 #include "initdb.h"
 #include "../utils/exceptions.hpp"
 #include "../utils/logger.h"
+#include "../utils/sessionmanager.hpp"
 
 namespace InitDBController {
 
@@ -17,7 +18,6 @@ namespace InitDBController {
             qDebug() << "Database path: " << DB_ABSOLUTE_PATH;
             QSqlDatabase db = openDB();
             createTables(db);
-            db.close();
         } catch (DatabaseException& e) {
             qCritical() << e.message();
             Logger::showFatalMessage(e.message());
@@ -35,6 +35,7 @@ namespace InitDBController {
         }
         if (db.open()) {
             qDebug() << "Database: connection ok";
+            DatabaseManager::instance().setDatabase(db);
         } else {
             throw DatabaseException("Database: connection failed: " + db.lastError().text());
         }
@@ -84,8 +85,9 @@ namespace InitDBController {
     bool createClassesTable(QSqlDatabase& db) {
         QSqlQuery query(db);
         bool success = query.exec("CREATE TABLE IF NOT EXISTS Classes ("
-            "id TEXT PRIMARY KEY,"                         // Class id (name)
-            "division TEXT NOT NULL,"                       // Class division (semesters or trimesters)
+            "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+            "name TEXT UNIQUE NOT NULL,"                   // Class name
+            "division TEXT NOT NULL,"                      // Class division (semesters or trimesters)
             "year_id TEXT NOT NULL,"                       // Class year id
             "subjects_ids TEXT"                            // Class subjects ids
         ")");
@@ -192,7 +194,8 @@ namespace InitDBController {
     bool createSubjectsTable(QSqlDatabase& db) {
         QSqlQuery query(db);
         bool success = query.exec("CREATE TABLE IF NOT EXISTS Subjects ("
-            "name TEXT PRIMARY KEY,"                         // Subject name
+            "id INTEGER PRIMARY KEY AUTOINCREMENT,"        // Subject name
+            "name TEXT UNIQUE NOT NULL,"                   // Subject name
             "short_name TEXT NOT NULL"                     // Subject short name
         ")");
         if (success) {
@@ -225,11 +228,13 @@ namespace InitDBController {
         QSqlQuery query(db);
         bool success = query.exec("CREATE TABLE IF NOT EXISTS Grades ("
             "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-            "student_id TEXT NOT NULL,"                     // Student id
-            "activity_id TEXT NOT NULL,"                    // Activity id
             "grade REAL NOT NULL,"                          // Student grade
+            "student_id INTEGER NOT NULL,"                     // Student id
+            "activity_id INTEGER NOT NULL,"                    // Activity id
+            "subject_id INTEGER NOT NULL,"                     // Activity subject id
             "FOREIGN KEY (student_id) REFERENCES Students(id) ON DELETE CASCADE,"
-            "FOREIGN KEY (activity_id) REFERENCES GradedActivities(id) ON DELETE CASCADE"
+            "FOREIGN KEY (activity_id) REFERENCES GradedActivities(id) ON DELETE CASCADE,"
+            "FOREIGN KEY (subject_id) REFERENCES Subjects(id) ON DELETE CASCADE"
         ")");
         if (success) {
             qDebug() << "Database: Grades table created";

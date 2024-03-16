@@ -8,8 +8,11 @@
 namespace ClassesController {
 
     QStringList getClasses();
-    QStringList getSubjects(const QString& class_id);
-    QString getDivision(const QString& class_id);
+    QStringList getSubjects(int class_id);
+    QStringList getSubjects(const QString& class_name);
+    QString getDivision(int class_id);
+    QString getDivision(const QString& class_name);
+    QHash<QString,QVariant> getClassSubjectsAndDivision(const QString& class_name);
 
 }
 
