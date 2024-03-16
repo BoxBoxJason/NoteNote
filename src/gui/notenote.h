@@ -17,6 +17,7 @@ public:
 private:
     NavigationBar* navigation_bar;
     PagesManagerWidget* pages_manager;
+    int user_id=-1;
 
 protected:
     void closeEvent(QCloseEvent* event);

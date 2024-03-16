@@ -53,15 +53,5 @@
         "slug": "schedules",
         "tooltip":"Schedules",
         "icon":":icons/schedules.png"
-    },
-    {
-        "slug": "settings",
-        "tooltip":"Settings",
-        "icon":":icons/settings.png"
-    },
-    {
-        "slug": "log_in_out",
-        "tooltip":"Log In",
-        "icon":":icons/logout.png"
     }
 ]

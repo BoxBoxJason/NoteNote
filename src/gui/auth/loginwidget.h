@@ -21,7 +21,6 @@ private:
 
 private slots:
     void loginClicked();
-    void resetInputStyle();
 
 signals:
     void signIn(int user_id);

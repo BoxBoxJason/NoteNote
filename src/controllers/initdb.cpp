@@ -73,6 +73,7 @@ namespace InitDBController {
             "first_name TEXT NOT NULL,"
             "last_name TEXT NOT NULL,"
             "email TEXT NOT NULL UNIQUE,"
+            "gender TEXT NOT NULL,"
             "hashed_password TEXT NOT NULL,"
             "salt TEXT NOT NULL"
         ")");
@@ -83,10 +84,10 @@ namespace InitDBController {
     bool createClassesTable(QSqlDatabase& db) {
         QSqlQuery query(db);
         bool success = query.exec("CREATE TABLE IF NOT EXISTS Classes ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-            "name TEXT NOT NULL,"                           // Class name
-            "year_id TEXT NOT NULL,"                        // Class year id
-            "subjects_ids TEXT NOT NULL"                   // Class subjects ids
+            "id TEXT PRIMARY KEY,"                         // Class id (name)
+            "division TEXT NOT NULL,"                       // Class division (semesters or trimesters)
+            "year_id TEXT NOT NULL,"                       // Class year id
+            "subjects_ids TEXT"                            // Class subjects ids
         ")");
         if (success) {
             qDebug() << "Database: Classes table created";

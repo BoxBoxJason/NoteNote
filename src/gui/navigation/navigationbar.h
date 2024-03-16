@@ -11,6 +11,9 @@ public:
     NavigationBar(QWidget* parent = nullptr);
     ~NavigationBar();
 
+public slots:
+    void loggedIn(bool logged_in);
+
 private:
     QAction* login_out_action;
 

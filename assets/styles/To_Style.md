@@ -4,6 +4,7 @@
 - welcome_label
 - error_display_label
 - auth_input_label
+- picker_label
 
 ### QPushButton
 - PageSwitcher
@@ -12,3 +13,6 @@
 ### QLineEdit
 - auth_input
 - auth_input_incorrect
+
+### QComboBox
+- picker_combobox

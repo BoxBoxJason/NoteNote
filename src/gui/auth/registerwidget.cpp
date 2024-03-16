@@ -1,6 +1,4 @@
-#include <QGridLayout>
 #include <QVBoxLayout>
-#include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
@@ -10,81 +8,79 @@
 #include "../../controllers/userscontroller.h"
 
 RegisterWidget::RegisterWidget(QWidget* parent) : QWidget(parent) {
-    QGridLayout* layout = new QGridLayout(this);
+    QVBoxLayout* layout = new QVBoxLayout(this);
 
     // First name section
-    QVBoxLayout* first_name_layout = new QVBoxLayout();
     QLabel* first_name_label = new QLabel(tr("First name"));
     first_name_label->setObjectName("auth_input_label");
-    first_name_layout->addWidget(first_name_label,0,Qt::AlignBottom | Qt::AlignHCenter);
+    first_name_label->setAlignment(Qt::AlignCenter);
+    layout->addWidget(first_name_label, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
     first_name_line_edit = new QLineEdit(this);
     first_name_line_edit->setObjectName("auth_input");
     first_name_line_edit->setToolTip(tr("Only letters and hyphens are allowed"));
     connect(first_name_line_edit, &QLineEdit::textChanged, this, &RegisterWidget::checkFirstName);
-    first_name_layout->addWidget(first_name_line_edit,0,Qt::AlignTop | Qt::AlignHCenter);
-    layout->addLayout(first_name_layout,0,0,1,1,Qt::AlignCenter);
+    layout->addWidget(first_name_line_edit, 0, Qt::AlignHCenter | Qt::AlignTop);
 
     // Last name section
-    QVBoxLayout* last_name_layout = new QVBoxLayout();
     QLabel* last_name_label = new QLabel(tr("Last name"));
     last_name_label->setObjectName("auth_input_label");
-    last_name_layout->addWidget(last_name_label,0,Qt::AlignBottom | Qt::AlignHCenter);
+    last_name_label->setAlignment(Qt::AlignCenter);
+    layout->addWidget(last_name_label, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
     last_name_line_edit = new QLineEdit(this);
     last_name_line_edit->setObjectName("auth_input");
     last_name_line_edit->setToolTip(tr("Only letters and hyphens are allowed"));
     connect(last_name_line_edit, &QLineEdit::textChanged, this, &RegisterWidget::checkLastName);
-    last_name_layout->addWidget(last_name_line_edit,0,Qt::AlignTop | Qt::AlignHCenter);
-    layout->addLayout(last_name_layout,0,1,1,1,Qt::AlignCenter);
+    layout->addWidget(last_name_line_edit, 0, Qt::AlignHCenter | Qt::AlignTop);
 
     // Email section
-    QHBoxLayout* email_layout = new QHBoxLayout();
     QLabel* email_label = new QLabel(tr("Email"));
     email_label->setObjectName("auth_input_label");
-    email_layout->addWidget(email_label,0, Qt::AlignVCenter | Qt::AlignLeft);
+    email_label->setAlignment(Qt::AlignCenter);
+    layout->addWidget(email_label, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
     email_line_edit = new QLineEdit(this);
     email_line_edit->setObjectName("auth_input");
-    email_line_edit->setToolTip(tr("Valid email format"));
+    email_line_edit->setToolTip(tr("Valid email format required"));
     connect(email_line_edit, &QLineEdit::textChanged, this, &RegisterWidget::checkEmail);
-    email_layout->addWidget(email_line_edit,0,Qt::AlignVCenter | Qt::AlignLeft);
-    layout->addLayout(email_layout,1,0,1,2,Qt::AlignCenter);
+    layout->addWidget(email_line_edit, 0, Qt::AlignHCenter | Qt::AlignTop);
 
     // Password section
-    QHBoxLayout* password_layout = new QHBoxLayout();
     QLabel* password_label = new QLabel(tr("Password"));
     password_label->setObjectName("auth_input_label");
-    password_layout->addWidget(password_label,0,Qt::AlignVCenter | Qt::AlignLeft);
+    password_label->setAlignment(Qt::AlignCenter);
+    layout->addWidget(password_label, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
     password_line_edit = new QLineEdit(this);
     password_line_edit->setEchoMode(QLineEdit::Password);
     password_line_edit->setObjectName("auth_input");
     password_line_edit->setToolTip(tr("At least 8 characters letters, numbers and special characters"));
     connect(password_line_edit, &QLineEdit::textChanged, this, &RegisterWidget::checkPassword);
-    password_layout->addWidget(password_line_edit,0,Qt::AlignVCenter | Qt::AlignLeft);
-    layout->addLayout(password_layout,2,0,1,2,Qt::AlignCenter);
+    layout->addWidget(password_line_edit, 0, Qt::AlignHCenter | Qt::AlignTop);
 
     // Confirm password section
-    QHBoxLayout* confirm_password_layout = new QHBoxLayout();
     QLabel* confirm_password_label = new QLabel(tr("Confirm password"));
     confirm_password_label->setObjectName("auth_input_label");
-    confirm_password_layout->addWidget(confirm_password_label,0,Qt::AlignVCenter | Qt::AlignLeft);
+    confirm_password_label->setAlignment(Qt::AlignCenter);
+    layout->addWidget(confirm_password_label, 0, Qt::AlignHCenter | Qt::AlignBottom);
 
     confirm_password_line_edit = new QLineEdit(this);
     confirm_password_line_edit->setEchoMode(QLineEdit::Password);
     confirm_password_line_edit->setObjectName("auth_input");
     confirm_password_line_edit->setToolTip(tr("Must match the password"));
     connect(confirm_password_line_edit, &QLineEdit::textChanged, this, &RegisterWidget::checkConfirmPassword);
-    confirm_password_layout->addWidget(confirm_password_line_edit,0,Qt::AlignVCenter | Qt::AlignLeft);
-    layout->addLayout(confirm_password_layout,3,0,1,2,Qt::AlignCenter);
+    layout->addWidget(confirm_password_line_edit, 0, Qt::AlignHCenter | Qt::AlignTop);
 
-    // Add register button
+    // Register button
     register_button = new QPushButton(tr("Register"));
     register_button->setObjectName("auth_submit_button");
     connect(register_button, &QPushButton::clicked, this, &RegisterWidget::registerClicked);
-    layout->addWidget(register_button,4,0,1,2,Qt::AlignHCenter | Qt::AlignTop);
+    register_button->setEnabled(false);
+    layout->addWidget(register_button, 0, Qt::AlignHCenter);
 
+    layout->setSpacing(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     setLayout(layout);
 }
 
