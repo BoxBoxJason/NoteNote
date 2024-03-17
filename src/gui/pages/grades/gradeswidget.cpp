@@ -2,6 +2,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QIcon>
 #include "gradeswidget.h"
 #include "classtrimestersubjectpicker.h"
 
@@ -13,15 +14,17 @@ GradesWidget::GradesWidget(QWidget* parent)  : QWidget(parent) {
     GradesDisplay* grades_display = new GradesDisplay(this);
     layout->addWidget(grades_display,1,Qt::AlignTop | Qt::AlignHCenter);
 
-    // Action buttons
+    // Save / export buttons
     QHBoxLayout* buttons_layout = new QHBoxLayout;
-    QPushButton* save_button = new QPushButton(tr("Save"), this);
+    QPushButton* save_button = new QPushButton(QIcon(":icons/save.png"),"",this);
+    save_button->setToolTip(tr("Save changes"));
     connect(save_button, &QPushButton::clicked, this, &GradesWidget::saveChanges);
-    buttons_layout->addWidget(save_button);
+    buttons_layout->addWidget(save_button,0,Qt::AlignRight);
 
-    QPushButton* export_button = new QPushButton(tr("Export"), this);
+    QPushButton* export_button = new QPushButton(QIcon(":icons/export.png"),"",this);
+    export_button->setToolTip(tr("Export to CSV"));
     connect(export_button, &QPushButton::clicked, this, &GradesWidget::exportToCSV);
-    buttons_layout->addWidget(export_button);
+    buttons_layout->addWidget(export_button,0,Qt::AlignLeft);
 
     layout->addLayout(buttons_layout);
     setLayout(layout);
