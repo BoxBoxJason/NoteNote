@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Text document",
+        "extension": ".docx",
+        "icon": ":icons/extensions/docx.png"
+    },
+    {
+        "name": "Powerpoint presentation",
+        "extension": ".pptx",
+        "icon": ":icons/extensions/pptx.png"
+    },
+    {
+        "name": "Spreadsheet",
+        "extension": ".xlsx",
+        "icon": ":icons/extensions/xlsx.png"
+    },
+    {
+        "name": "Text document",
+        "extension": ".txt",
+        "icon": ":icons/extensions/txt.png"
+    },
+    {
+        "name": "Text document",
+        "extension": ".md",
+        "icon": ":icons/extensions/md.png"
+    },
+    {
+        "name":"No extension",
+        "extension": "",
+        "icon": ":icons/extensions/none.png"
+    },
+    {
+        "name": "Custom extension",
+        "extension": "",
+        "icon": ":icons/extensions/custom.png"
+    },
+    {
+        "name": "Directory",
+        "extension": "",
+        "icon": ":icons/extensions/dir.png"
+    }
+]
