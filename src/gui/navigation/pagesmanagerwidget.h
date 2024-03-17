@@ -14,6 +14,8 @@
 #include "../pages/activities/ungraded/ungradedactivitieswidget.h"
 #include "../pages/assiduity/absences/absenceswidget.h"
 #include "../pages/assiduity/lates/lateswidget.h"
+#include "../pages/sanctions/sanctionswidget.h"
+#include "../pages/settings/settingswidget.h"
 #include "../auth/authwidget.h"
 
 class PagesManagerWidget : public QWidget {
@@ -39,10 +41,12 @@ private:
         {"reports", [this](){ return new ReportsWidget(this); }},
         {"lessons", [this](){ return new LessonsWidget(this); }},
         {"themes", [this](){ return new ThemesWidget(this); }},
-        {"graded_activities", [this](){ return new GradedActivitiesWidget(this); }},
-        {"ungraded_activities", [this](){ return new UngradedActivitiesWidget(this); }},
+        {"gradedactivities", [this](){ return new GradedActivitiesWidget(this); }},
+        {"ungradedactivities", [this](){ return new UngradedActivitiesWidget(this); }},
         {"absences", [this](){ return new AbsencesWidget(this); }},
-        {"lates", [this](){ return new LatesWidget(this); }}
+        {"lates", [this](){ return new LatesWidget(this); }},
+        {"sanctions", [this](){ return new SanctionsWidget(this); }},
+        {"settings", [this](){ return new SettingsWidget(this); }}
     };
 };
 
