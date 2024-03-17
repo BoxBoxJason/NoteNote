@@ -9,7 +9,7 @@ NavigationBar::NavigationBar(QWidget* parent) : QToolBar(parent) {
     setMovable(false);
     setFloatable(false);
     setOrientation(Qt::Vertical);
-    QFile variables_json_file(":styles/toolbar.json");
+    QFile variables_json_file(":enums/toolbar.json");
     if (variables_json_file.open(QFile::ReadOnly)) {
         QJsonArray toolbar_array = QJsonDocument::fromJson(variables_json_file.readAll()).array();
         variables_json_file.close();

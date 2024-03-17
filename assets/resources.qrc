@@ -21,6 +21,8 @@
 
         <file>styles/notenote.qss</file>
         <file>styles/variables.json</file>
-        <file>styles/toolbar.json</file>
+
+        <file>enums/toolbar.json</file>
+        <file>enums/nontakengrades.json</file>
     </qresource>
 </RCC>
