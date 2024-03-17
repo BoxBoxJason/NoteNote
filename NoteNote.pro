@@ -38,7 +38,8 @@ SOURCES += \
     src/utils/formatutils.cpp \
     src/models/classesmodel.cpp \
     src/controllers/classescontroller.cpp \
-    src/gui/pages/grades/gradesdisplay.cpp
+    src/gui/pages/grades/gradesdisplay.cpp \
+    src/gui/pages/settings/settingswidget.cpp
 
 HEADERS += \
     src/gui/notenote.h \
@@ -71,7 +72,8 @@ HEADERS += \
     src/utils/formatutils.h \
     src/models/classesmodel.h \
     src/controllers/classescontroller.h \
-    src/gui/pages/grades/gradesdisplay.h
+    src/gui/pages/grades/gradesdisplay.h \
+    src/gui/pages/settings/settingswidget.h
 
 TRANSLATIONS += \
     assets/translations/NoteNote_fr_FR.ts
