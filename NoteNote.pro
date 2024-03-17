@@ -37,7 +37,8 @@ SOURCES += \
     src/gui/pages/grades/classtrimestersubjectpicker.cpp \
     src/utils/formatutils.cpp \
     src/models/classesmodel.cpp \
-    src/controllers/classescontroller.cpp
+    src/controllers/classescontroller.cpp \
+    src/gui/pages/grades/gradesdisplay.cpp
 
 HEADERS += \
     src/gui/notenote.h \
@@ -69,10 +70,11 @@ HEADERS += \
     src/utils/sessionmanager.hpp \
     src/utils/formatutils.h \
     src/models/classesmodel.h \
-    src/controllers/classescontroller.h
+    src/controllers/classescontroller.h \
+    src/gui/pages/grades/gradesdisplay.h
 
 TRANSLATIONS += \
-    NoteNote_fr_FR.ts
+    assets/translations/NoteNote_fr_FR.ts
 
 # Resources
 RESOURCES += \

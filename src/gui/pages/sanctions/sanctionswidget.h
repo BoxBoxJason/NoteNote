@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class SanctionsWidget : public QWidget
-{
+class SanctionsWidget : public QWidget {
     Q_OBJECT
 
 public:
     SanctionsWidget(QWidget* parent = nullptr);
-    ~SanctionsWidget();
 
 };
 

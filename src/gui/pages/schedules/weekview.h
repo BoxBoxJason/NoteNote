@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class WeekView : public QWidget
-{
+class WeekView : public QWidget {
     Q_OBJECT
 
 public:
     WeekView(QWidget* parent = nullptr);
-    ~WeekView();
 
 };
 

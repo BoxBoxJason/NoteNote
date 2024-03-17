@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class UngradedActivitiesWidget : public QWidget
-{
+class UngradedActivitiesWidget : public QWidget {
     Q_OBJECT
 
 public:
     UngradedActivitiesWidget(QWidget* parent = nullptr);
-    ~UngradedActivitiesWidget();
 };
 
 #endif // GUI_PAGES_ACTIVITIES_UNGRADED_UNGRADEDACTIVITIESWIDGET_H

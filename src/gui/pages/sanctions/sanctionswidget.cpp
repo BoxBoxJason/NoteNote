@@ -1,9 +1,4 @@
 #include "sanctionswidget.h"
 
-SanctionsWidget::SanctionsWidget(QWidget* parent)
-    : QWidget(parent) {
-}
-
-
-SanctionsWidget::~SanctionsWidget() {
+SanctionsWidget::SanctionsWidget(QWidget* parent) : QWidget(parent) {
 }

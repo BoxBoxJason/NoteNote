@@ -8,7 +8,9 @@ namespace ClassesController {
         QStringList classes;
         QHash<int,QHash<QString,QVariant>> classes_data = ClassesModel::getClasses(QHash<QString,QVariant>(), QStringList{"id","name"});
         for(auto it = classes_data.begin(); it != classes_data.end(); it++){
-            classes.append(it.value()["name"].toString());
+            QString class_name = it.value()["name"].toString().trimmed();
+            if (! class_name.isEmpty())
+                classes.append(class_name);
         }
         return classes;
     }

@@ -47,10 +47,6 @@ NavigationBar::NavigationBar(QWidget* parent) : QToolBar(parent) {
 }
 
 
-NavigationBar::~NavigationBar() {
-}
-
-
 void NavigationBar::loggedIn(bool logged_in) {
     if (logged_in) {
         login_out_action->setIcon(QIcon(":icons/logout.png"));

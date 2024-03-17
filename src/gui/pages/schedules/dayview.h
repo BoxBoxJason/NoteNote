@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class DayView : public QWidget
-{
+class DayView : public QWidget {
     Q_OBJECT
 
 public:
     DayView(QWidget* parent = nullptr);
-    ~DayView();
 
 };
 

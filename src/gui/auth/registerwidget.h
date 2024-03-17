@@ -11,7 +11,6 @@ class RegisterWidget : public QWidget
 
 public:
     RegisterWidget(QWidget* parent = nullptr);
-    ~RegisterWidget();
 
 public slots:
     void clean();

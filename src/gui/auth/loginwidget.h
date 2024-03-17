@@ -10,7 +10,6 @@ class LoginWidget : public QWidget
 
 public:
     LoginWidget(QWidget* parent = nullptr);
-    ~LoginWidget();
 
 public slots:
     void clean();

@@ -11,10 +11,6 @@ PagesManagerWidget::PagesManagerWidget(QWidget* parent) : QWidget(parent) {
 }
 
 
-PagesManagerWidget::~PagesManagerWidget() {
-}
-
-
 void PagesManagerWidget::login(int user_id) {
     SessionManager::instance().setUserId(user_id);
     changePage("schedules");

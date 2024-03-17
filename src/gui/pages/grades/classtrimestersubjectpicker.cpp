@@ -44,12 +44,13 @@ ClassTrimesterSubjectPicker::ClassTrimesterSubjectPicker(QWidget* parent) : QWid
     connect(division_picker, &QComboBox::currentTextChanged, this, &ClassTrimesterSubjectPicker::subjectOrDivisionSelected);
     layout->addWidget(division_picker, 1, 2, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
 
-    class_picker->addItems(ClassesController::getClasses());
     setLayout(layout);
 }
 
 
-ClassTrimesterSubjectPicker::~ClassTrimesterSubjectPicker() {
+void ClassTrimesterSubjectPicker::updateClassList() {
+    class_picker->clear();
+    class_picker->addItems(ClassesController::getClasses());
 }
 
 

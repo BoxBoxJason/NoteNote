@@ -5,13 +5,14 @@
 #include <QComboBox>
 #include <QLabel>
 
-class ClassTrimesterSubjectPicker : public QWidget
-{
+class ClassTrimesterSubjectPicker : public QWidget {
     Q_OBJECT
 
 public:
     ClassTrimesterSubjectPicker(QWidget* parent = nullptr);
-    ~ClassTrimesterSubjectPicker();
+
+public slots:
+    void updateClassList();
 
 private slots:
     void classSelected(const QString& class_id);

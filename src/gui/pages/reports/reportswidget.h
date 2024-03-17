@@ -4,13 +4,11 @@
 #include <QWidget>
 #include <QString>
 
-class ReportsWidget : public QWidget
-{
+class ReportsWidget : public QWidget {
     Q_OBJECT
 
 public:
     ReportsWidget(QWidget* parent = nullptr);
-    ~ReportsWidget();
 
 private:
     void showStudentReport(int student_id, int year_id, int trimester_id);

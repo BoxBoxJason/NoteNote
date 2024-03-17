@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class StudentsWidget : public QWidget
-{
+class StudentsWidget : public QWidget {
     Q_OBJECT
 
 public:
     StudentsWidget(QWidget* parent = nullptr);
-    ~StudentsWidget();
 };
 
 #endif // GUI_PAGES_STUDENTS_STUDENTSWIDGET_H

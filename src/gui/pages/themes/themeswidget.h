@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class ThemesWidget : public QWidget
-{
+class ThemesWidget : public QWidget {
     Q_OBJECT
 
 public:
     ThemesWidget(QWidget* parent = nullptr);
-    ~ThemesWidget();
 
 };
 

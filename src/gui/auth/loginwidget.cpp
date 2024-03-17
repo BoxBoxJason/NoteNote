@@ -42,10 +42,6 @@ LoginWidget::LoginWidget(QWidget* parent) : QWidget(parent) {
 }
 
 
-LoginWidget::~LoginWidget() {
-}
-
-
 void LoginWidget::clean() {
     email_line_edit->clear();
     password_line_edit->clear();

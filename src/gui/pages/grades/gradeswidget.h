@@ -9,7 +9,6 @@ class GradesWidget : public QWidget
 
 public:
     GradesWidget(QWidget* parent = nullptr);
-    ~GradesWidget();
 
 };
 

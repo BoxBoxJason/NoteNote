@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class GradedActivitiesWidget : public QWidget
-{
+class GradedActivitiesWidget : public QWidget {
     Q_OBJECT
 
 public:
     GradedActivitiesWidget(QWidget* parent = nullptr);
-    ~GradedActivitiesWidget();
 
 };
 

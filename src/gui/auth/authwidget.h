@@ -7,13 +7,11 @@
 #include "loginwidget.h"
 #include "registerwidget.h"
 
-class AuthWidget : public QWidget
-{
+class AuthWidget : public QWidget {
     Q_OBJECT
 
 public:
     AuthWidget(QWidget* parent = nullptr);
-    ~AuthWidget();
 
 public slots:
     void clean();

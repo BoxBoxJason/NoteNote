@@ -1,10 +1,5 @@
 #include "gradedactivitieswidget.h"
 
 
-GradedActivitiesWidget::GradedActivitiesWidget(QWidget* parent)
-    : QWidget(parent) {
-}
-
-
-GradedActivitiesWidget::~GradedActivitiesWidget() {
+GradedActivitiesWidget::GradedActivitiesWidget(QWidget* parent) : QWidget(parent) {
 }

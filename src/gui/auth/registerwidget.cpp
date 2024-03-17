@@ -85,10 +85,6 @@ RegisterWidget::RegisterWidget(QWidget* parent) : QWidget(parent) {
 }
 
 
-RegisterWidget::~RegisterWidget() {
-}
-
-
 void RegisterWidget::clean() {
     first_name_line_edit->clear();
     first_name_line_edit->setObjectName("auth_input");

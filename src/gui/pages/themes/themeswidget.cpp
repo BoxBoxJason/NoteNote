@@ -1,9 +1,4 @@
 #include "themeswidget.h"
 
-ThemesWidget::ThemesWidget(QWidget* parent)
-    : QWidget(parent) {
-}
-
-
-ThemesWidget::~ThemesWidget() {
+ThemesWidget::ThemesWidget(QWidget* parent) : QWidget(parent) {
 }

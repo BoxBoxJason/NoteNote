@@ -44,10 +44,6 @@ AuthWidget::AuthWidget(QWidget* parent) : QWidget(parent) {
 }
 
 
-AuthWidget::~AuthWidget() {
-}
-
-
 void AuthWidget::clean() {
     login_widget->clean();
     register_widget->clean();

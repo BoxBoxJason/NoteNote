@@ -9,7 +9,6 @@ class NavigationBar : public QToolBar
 
 public:
     NavigationBar(QWidget* parent = nullptr);
-    ~NavigationBar();
 
 public slots:
     void loggedIn(bool logged_in);

@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class LatesWidget : public QWidget
-{
+class LatesWidget : public QWidget {
     Q_OBJECT
 
 public:
     LatesWidget(QWidget* parent = nullptr);
-    ~LatesWidget();
 
 };
 

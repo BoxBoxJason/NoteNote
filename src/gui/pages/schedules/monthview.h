@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class MonthView : public QWidget
-{
+class MonthView : public QWidget {
     Q_OBJECT
 
 public:
     MonthView(QWidget* parent = nullptr);
-    ~MonthView();
 
 };
 

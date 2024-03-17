@@ -7,13 +7,11 @@
 #include "monthview.h"
 #include "dayview.h"
 
-class SchedulesWidget : public QWidget
-{
+class SchedulesWidget : public QWidget {
     Q_OBJECT
 
 public:
     SchedulesWidget(QWidget* parent = nullptr);
-    ~SchedulesWidget();
 
 private:
     QStackedLayout* stacked_layout;

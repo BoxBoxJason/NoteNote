@@ -3,13 +3,11 @@
 
 #include <QWidget>
 
-class AbsencesWidget : public QWidget
-{
+class AbsencesWidget : public QWidget {
     Q_OBJECT
 
 public:
     AbsencesWidget(QWidget* parent = nullptr);
-    ~AbsencesWidget();
 
 };
 

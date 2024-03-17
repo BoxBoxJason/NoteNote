@@ -2,7 +2,3 @@
 
 StudentsWidget::StudentsWidget(QWidget* parent) : QWidget(parent) {
 }
-
-
-StudentsWidget::~StudentsWidget() {
-}

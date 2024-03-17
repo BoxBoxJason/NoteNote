@@ -16,13 +16,11 @@
 #include "../pages/assiduity/lates/lateswidget.h"
 #include "../auth/authwidget.h"
 
-class PagesManagerWidget : public QWidget
-{
+class PagesManagerWidget : public QWidget {
     Q_OBJECT
 
 public:
     PagesManagerWidget(QWidget* parent = nullptr);
-    ~PagesManagerWidget();
 
 public slots:
     void changePage(const QString& page_name);
