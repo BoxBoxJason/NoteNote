@@ -18,6 +18,8 @@
         <file>icons/themes.png</file>
         <file>icons/students.png</file>
         <file>icons/login.png</file>
+        <file>icons/export.png</file>
+        <file>icons/save.png</file>
 
         <file>styles/notenote.qss</file>
         <file>styles/variables.json</file>

@@ -9,6 +9,12 @@ class ThemesWidget : public QWidget {
 public:
     ThemesWidget(QWidget* parent = nullptr);
 
+private slots:
+    void saveChanges();
+    void exportToCSV();
+
+private:
+    QString getCSV();
 };
 
 #endif // GUI_PAGES_THEMES_THEMESWIDGET_H

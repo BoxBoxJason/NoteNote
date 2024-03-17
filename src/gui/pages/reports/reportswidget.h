@@ -10,8 +10,14 @@ class ReportsWidget : public QWidget {
 public:
     ReportsWidget(QWidget* parent = nullptr);
 
-private:
+private slots:
     void showStudentReport(int student_id, int year_id, int trimester_id);
+    void exportToCSV();
+    void saveChanges();
+
+private:
+    QString getCSV();
+
 };
 
 #endif // GUI_PAGES_REPORTS_REPORTSWIDGET_H
