@@ -2,56 +2,56 @@
     {
         "slug": "grades",
         "tooltip":"Students Grades",
-        "icon":":icons/grades.png"
+        "icon":":icons/toolbar/grades.png"
     },
     {
         "slug": "lessons",
         "tooltip":"Teacher Lessons",
-        "icon":":icons/lessons.png"
+        "icon":":icons/toolbar/lessons.png"
     },
     {
         "slug": "students",
         "tooltip":"Students & Classes",
-        "icon":":icons/students.png"
+        "icon":":icons/toolbar/students.png"
     },
     {
         "slug": "themes",
         "tooltip":"Themes",
-        "icon":":icons/themes.png"
+        "icon":":icons/toolbar/themes.png"
     },
     {
         "slug": "lates",
         "tooltip":"Students Lates",
-        "icon":":icons/lates.png"
+        "icon":":icons/toolbar/lates.png"
     },
     {
         "slug": "absences",
         "tooltip":"Students Absences",
-        "icon":":icons/absences.png"
+        "icon":":icons/toolbar/absences.png"
     },
     {
         "slug": "reports",
         "tooltip":"Students Reports",
-        "icon":":icons/reports.png"
+        "icon":":icons/toolbar/reports.png"
     },
     {
         "slug": "gradedactivities",
         "tooltip":"Graded Activities",
-        "icon":":icons/gradedactivities.png"
+        "icon":":icons/toolbar/gradedactivities.png"
     },
     {
         "slug":"ungradedactivities",
         "tooltip":"Ungraded Activities",
-        "icon":":icons/ungradedactivities.png"
+        "icon":":icons/toolbar/ungradedactivities.png"
     },
     {
         "slug": "sanctions",
         "tooltip":"Sanctions",
-        "icon":":icons/sanctions.png"
+        "icon":":icons/toolbar/sanctions.png"
     },
     {
         "slug": "schedules",
         "tooltip":"Schedules",
-        "icon":":icons/schedules.png"
+        "icon":":icons/toolbar/schedules.png"
     }
 ]

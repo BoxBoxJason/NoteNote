@@ -3,23 +3,34 @@
         <file>images/logo.png</file>
         <file>images/logo_bg.png</file>
         
-        <file>icons/reports.png</file>
-        <file>icons/absences.png</file>
-        <file>icons/checkmark.png</file>
-        <file>icons/gradedactivities.png</file>
-        <file>icons/lates.png</file>
-        <file>icons/lessons.png</file>
-        <file>icons/sanctions.png</file>
-        <file>icons/schedules.png</file>
-        <file>icons/ungradedactivities.png</file>
-        <file>icons/logout.png</file>
-        <file>icons/grades.png</file>
-        <file>icons/settings.png</file>
-        <file>icons/themes.png</file>
-        <file>icons/students.png</file>
-        <file>icons/login.png</file>
-        <file>icons/export.png</file>
-        <file>icons/save.png</file>
+        <file>icons/toolbar/reports.png</file>
+        <file>icons/toolbar/absences.png</file>
+        <file>icons/toolbar/checkmark.png</file>
+        <file>icons/toolbar/gradedactivities.png</file>
+        <file>icons/toolbar/lates.png</file>
+        <file>icons/toolbar/lessons.png</file>
+        <file>icons/toolbar/sanctions.png</file>
+        <file>icons/toolbar/schedules.png</file>
+        <file>icons/toolbar/ungradedactivities.png</file>
+        <file>icons/toolbar/logout.png</file>
+        <file>icons/toolbar/grades.png</file>
+        <file>icons/toolbar/settings.png</file>
+        <file>icons/toolbar/themes.png</file>
+        <file>icons/toolbar/students.png</file>
+        <file>icons/toolbar/login.png</file>
+
+        <file>icons/actions/export.png</file>
+        <file>icons/actions/save.png</file>
+
+        <file>icons/extensions/custom.png</file>
+        <file>icons/extensions/docx.png</file>
+        <file>icons/extensions/folder.png</file>
+        <file>icons/extensions/folderopen.png</file>
+        <file>icons/extensions/md.png</file>
+        <file>icons/extensions/none.png</file>
+        <file>icons/extensions/pptx.png</file>
+        <file>icons/extensions/txt.png</file>
+        <file>icons/extensions/xlsx.png</file>
 
         <file>styles/notenote.qss</file>
         <file>styles/variables.json</file>

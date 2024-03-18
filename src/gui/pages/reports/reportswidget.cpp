@@ -9,12 +9,12 @@ ReportsWidget::ReportsWidget(QWidget* parent) : QWidget(parent) {
 
     // Save / export buttons
     QHBoxLayout* buttons_layout = new QHBoxLayout;
-    QPushButton* save_button = new QPushButton(QIcon(":icons/save.png"),"",this);
+    QPushButton* save_button = new QPushButton(QIcon(":icons/actions/save.png"),"",this);
     save_button->setToolTip(tr("Save changes"));
     connect(save_button, &QPushButton::clicked, this, &ReportsWidget::saveChanges);
     buttons_layout->addWidget(save_button,0,Qt::AlignRight);
 
-    QPushButton* export_button = new QPushButton(QIcon(":icons/export.png"),"",this);
+    QPushButton* export_button = new QPushButton(QIcon(":icons/actions/export.png"),"",this);
     export_button->setToolTip(tr("Export to CSV"));
     connect(export_button, &QPushButton::clicked, this, &ReportsWidget::exportToCSV);
     buttons_layout->addWidget(export_button,0,Qt::AlignLeft);
