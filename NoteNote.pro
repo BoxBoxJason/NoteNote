@@ -39,7 +39,11 @@ SOURCES += \
     src/models/classesmodel.cpp \
     src/controllers/classescontroller.cpp \
     src/gui/pages/grades/gradesdisplay.cpp \
-    src/gui/pages/settings/settingswidget.cpp
+    src/gui/pages/settings/settingswidget.cpp \
+    src/gui/pages/lessons/filecreatorwidget.cpp \
+    src/gui/pages/lessons/namepickerwidget.cpp \
+    src/gui/pages/lessons/extensionpickerwidget.cpp \
+    src/utils/fileutils.cpp
 
 HEADERS += \
     src/gui/notenote.h \
@@ -73,7 +77,11 @@ HEADERS += \
     src/models/classesmodel.h \
     src/controllers/classescontroller.h \
     src/gui/pages/grades/gradesdisplay.h \
-    src/gui/pages/settings/settingswidget.h
+    src/gui/pages/settings/settingswidget.h \
+    src/gui/pages/lessons/filecreatorwidget.h \
+    src/gui/pages/lessons/namepickerwidget.h \
+    src/gui/pages/lessons/extensionpickerwidget.h \
+    src/utils/fileutils.h
 
 TRANSLATIONS += \
     assets/translations/NoteNote_fr_FR.ts
