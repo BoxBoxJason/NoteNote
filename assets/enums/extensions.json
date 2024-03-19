@@ -37,6 +37,6 @@
     {
         "name": "Directory",
         "extension": "",
-        "icon": ":icons/extensions/dir.png"
+        "icon": ":icons/extensions/folder.png"
     }
 ]

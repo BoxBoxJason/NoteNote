@@ -2,10 +2,11 @@
     <qresource>
         <file>images/logo.png</file>
         <file>images/logo_bg.png</file>
-        
+
+        <file>icons/checkmark.png</file>
+
         <file>icons/toolbar/reports.png</file>
         <file>icons/toolbar/absences.png</file>
-        <file>icons/toolbar/checkmark.png</file>
         <file>icons/toolbar/gradedactivities.png</file>
         <file>icons/toolbar/lates.png</file>
         <file>icons/toolbar/lessons.png</file>
