@@ -5,6 +5,7 @@
 #include <QJsonDocument>
 #include "gradesdisplay.h"
 #include "../../../utils/formatutils.h"
+#include "../../../utils/logger.h"
 
 static const int EDITED_ROLE = Qt::UserRole + 1;
 static const int GRADE_ID_ROLE = Qt::UserRole + 2;
@@ -83,6 +84,7 @@ GradesDisplayContextMenu::GradesDisplayContextMenu(QWidget* parent) : QMenu(pare
             connect(action, &QAction::triggered, this, [this, non_taken_slug]() { emit addAbsenceReason(non_taken_slug); });
         }
     } else {
-        qCritical() << "Could not load non-taken grades settings, context menu will be disabled, please check nontakengrades.json";
+        qWarning() << "Could not load non-taken grades settings, context menu will be disabled, please check nontakengrades.json";
+        Logger::showErrorMessage(tr("Could not load non-taken grades settings, context menu will be disabled, please check nontakengrades.json"));
     }
 }

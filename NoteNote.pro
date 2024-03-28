@@ -43,6 +43,7 @@ SOURCES += \
     src/gui/pages/lessons/filecreatorwidget.cpp \
     src/gui/pages/lessons/namepickerwidget.cpp \
     src/gui/pages/lessons/extensionpickerwidget.cpp \
+    src/gui/pages/lessons/lessonscontextmenu.cpp \
     src/utils/fileutils.cpp
 
 HEADERS += \
@@ -81,6 +82,7 @@ HEADERS += \
     src/gui/pages/lessons/filecreatorwidget.h \
     src/gui/pages/lessons/namepickerwidget.h \
     src/gui/pages/lessons/extensionpickerwidget.h \
+    src/gui/pages/lessons/lessonscontextmenu.h \
     src/utils/fileutils.h
 
 TRANSLATIONS += \

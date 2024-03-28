@@ -13,6 +13,8 @@
 ### QLineEdit
 - auth_input
 - auth_input_incorrect
+- picker_input
+- picker_input_incorrect
 
 ### QComboBox
 - picker_combobox

@@ -1,42 +1,74 @@
-[
-    {
-        "name": "Text document",
-        "extension": ".docx",
-        "icon": ":icons/extensions/docx.png"
+{
+    "icons": {
+        "docx": ":icons/extensions/docx.png",
+        "odt": ":icons/extensions/docx.png",
+        "pptx": ":icons/extensions/pptx.png", 
+        "xlsx": ":icons/extensions/xlsx.png",
+        "txt": ":icons/extensions/txt.png",
+        "md": ":icons/extensions/md.png",
+        "mp4": "icons/extensions/video.png",
+        "mp3": "icons/extensions/video.png",
+        "pdf": ":icons/extensions/pdf.png",
+        "zip": ":icons/extensions/zip.png",
+        "rar": ":icons/extensions/zip.png",
+        "7z": ":icons/extensions/zip.png",
+        "tar": ":icons/extensions/zip.png",
+        "gz": ":icons/extensions/zip.png",
+        "bz2": ":icons/extensions/zip.png",
+        "xz": ":icons/extensions/zip.png",
+        "tar.gz": ":icons/extensions/zip.png",
+        "tar.bz2": ":icons/extensions/zip.png",
+        "tar.xz": ":icons/extensions/zip.png",
+        "png": ":icons/extensions/image.png",
+        "jpg": ":icons/extensions/image.png",
+        "jpeg": ":icons/extensions/image.png",
+        "gif": ":icons/extensions/image.png",
+        "bmp": ":icons/extensions/image.png",
+        "tiff": ":icons/extensions/image.png",
+        "svg": ":icons/extensions/image.png",
+        "webp": ":icons/extensions/image.png",
+        "ico": ":icons/extensions/image.png"
     },
-    {
-        "name": "Powerpoint presentation",
-        "extension": ".pptx",
-        "icon": ":icons/extensions/pptx.png"
-    },
-    {
-        "name": "Spreadsheet",
-        "extension": ".xlsx",
-        "icon": ":icons/extensions/xlsx.png"
-    },
-    {
-        "name": "Text document",
-        "extension": ".txt",
-        "icon": ":icons/extensions/txt.png"
-    },
-    {
-        "name": "Text document",
-        "extension": ".md",
-        "icon": ":icons/extensions/md.png"
-    },
-    {
-        "name":"No extension",
-        "extension": "",
-        "icon": ":icons/extensions/none.png"
-    },
-    {
-        "name": "Custom extension",
-        "extension": "",
-        "icon": ":icons/extensions/custom.png"
-    },
-    {
-        "name": "Directory",
-        "extension": "",
-        "icon": ":icons/extensions/folder.png"
-    }
-]
+    "details": [
+        {
+            "name": "Text document",
+            "extension": ".docx",
+            "icon": ":icons/extensions/docx.png"
+        },
+        {
+            "name": "Powerpoint presentation",
+            "extension": ".pptx",
+            "icon": ":icons/extensions/pptx.png"
+        },
+        {
+            "name": "Spreadsheet",
+            "extension": ".xlsx",
+            "icon": ":icons/extensions/xlsx.png"
+        },
+        {
+            "name": "Text document",
+            "extension": ".txt",
+            "icon": ":icons/extensions/txt.png"
+        },
+        {
+            "name": "Text document",
+            "extension": ".md",
+            "icon": ":icons/extensions/md.png"
+        },
+        {
+            "name":"No extension",
+            "extension": "",
+            "icon": ":icons/extensions/none.png"
+        },
+        {
+            "name": "Custom extension",
+            "extension": "",
+            "icon": ":icons/extensions/custom.png"
+        },
+        {
+            "name": "Directory",
+            "extension": "",
+            "icon": ":icons/extensions/folder.png"
+        }
+    ]
+}

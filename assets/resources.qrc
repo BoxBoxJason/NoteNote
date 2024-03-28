@@ -38,5 +38,6 @@
 
         <file>enums/toolbar.json</file>
         <file>enums/nontakengrades.json</file>
+        <file>enums/extensions.json</file>
     </qresource>
 </RCC>
