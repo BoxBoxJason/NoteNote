@@ -28,7 +28,7 @@ LessonsWidget::LessonsWidget(QWidget* parent) : QTreeWidget(parent) {
     setDropIndicatorShown(true);
     setSelectionMode(QAbstractItemView::SingleSelection);
     setSelectionBehavior(QAbstractItemView::SelectRows);
-    setEditTriggers(QAbstractItemView::NoEditTriggers);
+    setEditTriggers(QAbstractItemView::DoubleClicked | QAbstractItemView::EditKeyPressed | QAbstractItemView::SelectedClicked);
 
     // Connect custom widget slots and signals
     connect(this, &LessonsWidget::itemChanged, this, &LessonsWidget::onItemChanged);
@@ -44,6 +44,7 @@ void LessonsWidget::showContextMenu(const QPoint& pos) {
     context_menu->prepareMenu(selectedItems().size() > 0 ? selectedItems().at(0) : invisibleRootItem());
     context_menu->exec(mapToGlobal(pos));
 }
+
 
 void LessonsWidget::loadFileSystem(QTreeWidgetItem& parent_item, const QJsonArray& json_file_system) {
     if (!json_file_system.isEmpty()) {

@@ -54,6 +54,11 @@ private slots:
      * @param item The folder item that was opened.
     */
     void folderOpened(QTreeWidgetItem* item);
+    /**
+     * @brief Slot to handle context menu request.
+     * @details Shows the context menu at the requested position.
+     * @param pos The position where the context menu was requested.
+    */
     void showContextMenu(const QPoint& pos);
 
 };

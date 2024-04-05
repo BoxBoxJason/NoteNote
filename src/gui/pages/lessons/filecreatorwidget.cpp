@@ -1,5 +1,6 @@
 #include <QDir>
 #include <QFile>
+#include <QString>
 #include <QDesktopServices>
 #include <QApplication>
 #include "../../../utils/fileutils.h"
@@ -56,7 +57,7 @@ bool FileCreatorWidget::checkFileName(const QString& file_name) {
     QString trimmed_name = file_name.trimmed();
     QString attempted_path = QDir::cleanPath(QDir((parent_item->text(1)).isEmpty() ? FileUtils::CUSTOM_FS_ROOT_DIR() : parent_item->text(1)).filePath(trimmed_name));
     if (FileUtils::checkFileNameValid(trimmed_name) && FileUtils::checkPathValid(attempted_path) && \
-        attempted_path.contains(FileUtils::CUSTOM_FS_ROOT_DIR()) && !QDir(attempted_path).exists()) {
+        attempted_path.startsWith(FileUtils::CUSTOM_FS_ROOT_DIR()) && !QDir(attempted_path).exists()) {
         emit validPath();
     } else {
         name_valid = false;
