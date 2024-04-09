@@ -1,5 +1,5 @@
-#include "classesmodel.h"
-#include "general.h"
+#include "models/classesmodel.h"
+#include "models/general.h"
 
 namespace ClassesModel {
 

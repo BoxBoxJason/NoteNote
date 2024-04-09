@@ -1,5 +1,5 @@
-#include "pagesmanagerwidget.h"
-#include "../../utils/sessionmanager.hpp"
+#include "gui/navigation/pagesmanagerwidget.h"
+#include "utils/sessionmanager.hpp"
 
 
 PagesManagerWidget::PagesManagerWidget(QWidget* parent) : QWidget(parent) {

@@ -1,7 +1,7 @@
 #include <QGridLayout>
-#include "classtrimestersubjectpicker.h"
-#include "../../../controllers/classescontroller.h"
-#include "../../../utils/formatutils.h"
+#include "gui/pages/grades/classtrimestersubjectpicker.h"
+#include "controllers/classescontroller.h"
+#include "utils/formatutils.h"
 
 const QHash<QString,QStringList> DIVISIONS = {
     {"trimester", {"T1", "T2", "T3"}},

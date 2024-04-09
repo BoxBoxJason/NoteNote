@@ -1,7 +1,7 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QPushButton>
-#include "reportswidget.h"
+#include "gui/pages/reports/reportswidget.h"
 
 
 ReportsWidget::ReportsWidget(QWidget* parent) : QWidget(parent) {

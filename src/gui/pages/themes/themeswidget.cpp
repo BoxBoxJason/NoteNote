@@ -2,7 +2,7 @@
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QIcon>
-#include "themeswidget.h"
+#include "gui/pages/themes/themeswidget.h"
 
 ThemesWidget::ThemesWidget(QWidget* parent) : QWidget(parent) {
     QVBoxLayout* layout = new QVBoxLayout(this);

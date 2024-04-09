@@ -1,5 +1,5 @@
 #include <QJsonObject>
-#include "themestreewidget.h"
+#include "gui/pages/themes/themestreewidget.h"
 
 ThemesTreeWidget::ThemesTreeWidget(QWidget* parent) : QTreeWidget(parent) {
     // Headers

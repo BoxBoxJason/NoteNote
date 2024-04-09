@@ -1,4 +1,4 @@
-#include "authutils.h"
+#include "controllers/utils/authutils.h"
 
 #include <QRegularExpression>
 #include <QCryptographicHash>

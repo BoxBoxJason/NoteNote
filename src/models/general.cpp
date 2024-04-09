@@ -4,9 +4,9 @@
 #include <QStringList>
 #include <QSqlDatabase>
 #include <QVariantList>
-#include "general.h"
-#include "../controllers/initdb.h"
-#include "../utils/sessionmanager.hpp"
+#include "models/general.h"
+#include "controllers/initdb.h"
+#include "utils/sessionmanager.hpp"
 
 namespace GeneralModel {
 

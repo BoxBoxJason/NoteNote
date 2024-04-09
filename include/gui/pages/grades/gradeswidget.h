@@ -2,7 +2,7 @@
 #define GUI_PAGES_GRADES_GRADESWIDGET_H
 
 #include <QWidget>
-#include "gradesdisplay.h"
+#include "gui/pages/grades/gradesdisplay.h"
 
 class GradesWidget : public QWidget
 {

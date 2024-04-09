@@ -1,5 +1,5 @@
-#include "usersmodel.h"
-#include "general.h"
+#include "models/usersmodel.h"
+#include "models/general.h"
 
 namespace UsersModel {
 

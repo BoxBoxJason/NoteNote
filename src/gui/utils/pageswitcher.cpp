@@ -1,5 +1,5 @@
 #include <QHBoxLayout>
-#include "pageswitcher.h"
+#include "gui/utils/pageswitcher.h"
 
 
 PageSwitcher::PageSwitcher(QWidget* parent, const QStringList& pages_names) : QWidget(parent) , pages_buttons(pages_names.size()) {

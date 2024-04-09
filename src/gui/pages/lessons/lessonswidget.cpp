@@ -2,8 +2,8 @@
 #include <QFileInfo>
 #include <QApplication>
 #include <QDir>
-#include "lessonswidget.h"
-#include "../../../utils/fileutils.h"
+#include "gui/pages/lessons/lessonswidget.h"
+#include "utils/fileutils.h"
 
 LessonsWidget::LessonsWidget(QWidget* parent) : QTreeWidget(parent) {
     QDir root_fs = QDir(FileUtils::CUSTOM_FS_ROOT_DIR());

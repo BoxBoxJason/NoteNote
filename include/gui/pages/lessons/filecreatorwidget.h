@@ -5,7 +5,7 @@
 #include <QWidget>
 #include <QStackedLayout>
 #include <QTreeWidgetItem>
-#include "extensionpickerwidget.h"
+#include "gui/pages/lessons/extensionpickerwidget.h"
 
 class FileCreatorWidget : public QDialog {
     /**

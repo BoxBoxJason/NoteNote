@@ -1,8 +1,8 @@
 #include <QStackedLayout>
 #include <QVBoxLayout>
 #include <QLabel>
-#include "authwidget.h"
-#include "../utils/pageswitcher.h"
+#include "gui/auth/authwidget.h"
+#include "gui/utils/pageswitcher.h"
 
 AuthWidget::AuthWidget(QWidget* parent) : QWidget(parent) {
     // Header label

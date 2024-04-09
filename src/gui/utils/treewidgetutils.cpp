@@ -1,5 +1,5 @@
 #include <QStringList>
-#include "treewidgetutils.h"
+#include "gui/utils/treewidgetutils.h"
 
 namespace TreeWidgetUtils {
 

@@ -3,9 +3,9 @@
 #include <QString>
 #include <QDesktopServices>
 #include <QApplication>
-#include "../../../utils/fileutils.h"
-#include "namepickerwidget.h"
-#include "filecreatorwidget.h"
+#include "utils/fileutils.h"
+#include "gui/pages/lessons/namepickerwidget.h"
+#include "gui/pages/lessons/filecreatorwidget.h"
 
 FileCreatorWidget::FileCreatorWidget(QTreeWidgetItem* parent_item, QWidget* parent) : QDialog(parent) , parent_item(parent_item) {
     layout = new QStackedLayout(this);

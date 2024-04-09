@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QCloseEvent>
-#include "./navigation/navigationbar.h"
-#include "./navigation/pagesmanagerwidget.h"
+#include "gui/navigation/navigationbar.h"
+#include "gui/navigation/pagesmanagerwidget.h"
 
 class NoteNote : public QMainWindow
 {

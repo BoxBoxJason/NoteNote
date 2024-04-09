@@ -1,5 +1,5 @@
-#ifndef UTILS_AUTHUTILS_H
-#define UTILS_AUTHUTILS_H
+#ifndef CONTROLLERS_UTILS_AUTHUTILS_H
+#define CONTROLLERS_UTILS_AUTHUTILS_H
 
 #include <QString>
 
@@ -13,4 +13,4 @@ namespace AuthUtils {
 
 }
 
-#endif // UTILS_AUTHUTILS_H
+#endif // CONTROLLERS_UTILS_AUTHUTILS_H

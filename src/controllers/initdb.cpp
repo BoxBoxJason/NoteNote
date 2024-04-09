@@ -2,10 +2,10 @@
 #include <QDir>
 #include <QSqlQuery>
 #include <QSqlError>
-#include "initdb.h"
-#include "../utils/exceptions.hpp"
-#include "../utils/logger.h"
-#include "../utils/sessionmanager.hpp"
+#include "controllers/initdb.h"
+#include "utils/exceptions.hpp"
+#include "utils/logger.h"
+#include "utils/sessionmanager.hpp"
 
 namespace InitDBController {
 

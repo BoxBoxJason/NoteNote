@@ -6,7 +6,7 @@
 #include <QApplication>
 #include <QMainWindow>
 #include <QMessageBox>
-#include "logger.h"
+#include "utils/logger.h"
 
 namespace Logger {
 

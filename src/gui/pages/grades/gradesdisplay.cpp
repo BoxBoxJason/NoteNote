@@ -3,9 +3,9 @@
 #include <QFile>
 #include <QJsonObject>
 #include <QJsonDocument>
-#include "gradesdisplay.h"
-#include "../../../utils/formatutils.h"
-#include "../../../utils/logger.h"
+#include "gui/pages/grades/gradesdisplay.h"
+#include "utils/formatutils.h"
+#include "utils/logger.h"
 
 static const int EDITED_ROLE = Qt::UserRole + 1;
 static const int GRADE_ID_ROLE = Qt::UserRole + 2;

@@ -5,8 +5,8 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
-#include "../../../utils/logger.h"
-#include "extensionpickerwidget.h"
+#include "utils/logger.h"
+#include "gui/pages/lessons/extensionpickerwidget.h"
 
 ExtensionPickerWidget::ExtensionPickerWidget(QWidget* parent) : QWidget(parent) {
     QGridLayout* layout = new QGridLayout(this);

@@ -65,4 +65,6 @@ build/
 *.tar.*
 *.dmg
 
+# NoteNote specific files
 html/
+include.py

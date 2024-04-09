@@ -1,6 +1,6 @@
-#include "userscontroller.h"
-#include "../models/usersmodel.h"
-#include "../utils/authutils.h"
+#include "controllers/userscontroller.h"
+#include "models/usersmodel.h"
+#include "controllers/utils/authutils.h"
 
 namespace UsersController {
 

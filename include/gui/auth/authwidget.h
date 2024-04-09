@@ -4,8 +4,8 @@
 #include <QWidget>
 #include <QStackedLayout>
 #include <QLabel>
-#include "loginwidget.h"
-#include "registerwidget.h"
+#include "gui/auth/loginwidget.h"
+#include "gui/auth/registerwidget.h"
 
 class AuthWidget : public QWidget {
     Q_OBJECT

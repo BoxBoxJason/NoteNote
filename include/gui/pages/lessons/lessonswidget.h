@@ -3,7 +3,7 @@
 
 #include <QTreeWidget>
 #include <QJsonArray>
-#include "lessonscontextmenu.h"
+#include "gui/pages/lessons/lessonscontextmenu.h"
 
 class LessonsWidget : public QTreeWidget {
     /**

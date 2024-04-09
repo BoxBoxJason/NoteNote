@@ -3,9 +3,9 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QRegularExpression>
-#include "registerwidget.h"
-#include "../../utils/authutils.h"
-#include "../../controllers/userscontroller.h"
+#include "gui/auth/registerwidget.h"
+#include "controllers/utils/authutils.h"
+#include "controllers/userscontroller.h"
 
 RegisterWidget::RegisterWidget(QWidget* parent) : QWidget(parent) {
     QVBoxLayout* layout = new QVBoxLayout(this);

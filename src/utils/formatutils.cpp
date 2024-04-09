@@ -2,7 +2,7 @@
 #include <QJsonObject>
 #include <QFile>
 #include <QString>
-#include "formatutils.h"
+#include "utils/formatutils.h"
 
 namespace FormatUtils {
 

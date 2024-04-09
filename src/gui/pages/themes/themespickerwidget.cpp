@@ -1,1 +1,1 @@
-#include "themespickerwidget.h"
+#include "gui/pages/themes/themespickerwidget.h"

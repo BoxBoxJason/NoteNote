@@ -1,7 +1,7 @@
 #include <QMessageBox>
 #include <QIcon>
-#include "notenote.h"
-#include "../utils/sessionmanager.hpp"
+#include "gui/notenote.h"
+#include "utils/sessionmanager.hpp"
 
 NoteNote::NoteNote(QWidget *parent) : QMainWindow(parent) {
     setWindowIcon(QIcon(":images/logo.png"));

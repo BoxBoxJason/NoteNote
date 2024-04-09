@@ -1,6 +1,6 @@
-#include "classescontroller.h"
-#include "../models/classesmodel.h"
-#include "../utils/formatutils.h"
+#include "controllers/classescontroller.h"
+#include "models/classesmodel.h"
+#include "utils/formatutils.h"
 
 namespace ClassesController {
 

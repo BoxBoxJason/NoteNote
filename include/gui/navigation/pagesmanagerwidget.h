@@ -4,19 +4,19 @@
 #include <QWidget>
 #include <QStackedLayout>
 #include <QMap>
-#include "../pages/schedules/scheduleswidget.h"
-#include "../pages/students/studentswidget.h"
-#include "../pages/grades/gradeswidget.h"
-#include "../pages/reports/reportswidget.h"
-#include "../pages/lessons/lessonswidget.h"
-#include "../pages/themes/themeswidget.h"
-#include "../pages/activities/graded/gradedactivitieswidget.h"
-#include "../pages/activities/ungraded/ungradedactivitieswidget.h"
-#include "../pages/assiduity/absences/absenceswidget.h"
-#include "../pages/assiduity/lates/lateswidget.h"
-#include "../pages/sanctions/sanctionswidget.h"
-#include "../pages/settings/settingswidget.h"
-#include "../auth/authwidget.h"
+#include "gui/pages/schedules/scheduleswidget.h"
+#include "gui/pages/students/studentswidget.h"
+#include "gui/pages/grades/gradeswidget.h"
+#include "gui/pages/reports/reportswidget.h"
+#include "gui/pages/lessons/lessonswidget.h"
+#include "gui/pages/themes/themeswidget.h"
+#include "gui/pages/activities/graded/gradedactivitieswidget.h"
+#include "gui/pages/activities/ungraded/ungradedactivitieswidget.h"
+#include "gui/pages/assiduity/absences/absenceswidget.h"
+#include "gui/pages/assiduity/lates/lateswidget.h"
+#include "gui/pages/sanctions/sanctionswidget.h"
+#include "gui/pages/settings/settingswidget.h"
+#include "gui/auth/authwidget.h"
 
 class PagesManagerWidget : public QWidget {
     Q_OBJECT

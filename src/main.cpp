@@ -2,9 +2,9 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include "./gui/notenote.h"
-#include "./controllers/initdb.h"
-#include "./utils/logger.h"
+#include "gui/notenote.h"
+#include "controllers/initdb.h"
+#include "utils/logger.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);

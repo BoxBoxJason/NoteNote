@@ -2,8 +2,8 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QFile>
-#include "navigationbar.h"
-#include "../../utils/logger.h"
+#include "gui/navigation/navigationbar.h"
+#include "utils/logger.h"
 
 
 NavigationBar::NavigationBar(QWidget* parent) : QToolBar(parent) {

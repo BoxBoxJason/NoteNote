@@ -3,8 +3,8 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QIcon>
-#include "gradeswidget.h"
-#include "classtrimestersubjectpicker.h"
+#include "gui/pages/grades/gradeswidget.h"
+#include "gui/pages/grades/classtrimestersubjectpicker.h"
 
 GradesWidget::GradesWidget(QWidget* parent)  : QWidget(parent) {
     QVBoxLayout* layout = new QVBoxLayout(this);

@@ -3,9 +3,9 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QString>
-#include "loginwidget.h"
-#include "../../utils/authutils.h"
-#include "../../controllers/userscontroller.h"
+#include "gui/auth/loginwidget.h"
+#include "controllers/utils/authutils.h"
+#include "controllers/userscontroller.h"
 
 LoginWidget::LoginWidget(QWidget* parent) : QWidget(parent) {
     QVBoxLayout* layout = new QVBoxLayout(this);

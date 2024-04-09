@@ -3,7 +3,7 @@
 
 #include <QTreeWidget>
 #include <QJsonArray>
-#include "themescontextmenu.h"
+#include "gui/pages/themes/themescontextmenu.h"
 
 class ThemesTreeWidget : public QTreeWidget {
     /**

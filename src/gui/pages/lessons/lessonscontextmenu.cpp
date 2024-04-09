@@ -6,9 +6,9 @@
 #include <QApplication>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include "filecreatorwidget.h"
-#include "lessonscontextmenu.h"
-#include "../../../utils/fileutils.h"
+#include "gui/pages/lessons/filecreatorwidget.h"
+#include "gui/pages/lessons/lessonscontextmenu.h"
+#include "utils/fileutils.h"
 
 LessonsContextMenu::LessonsContextMenu(QWidget* parent) : QMenu(parent) {
     create_new_item = new QAction("Create", this);

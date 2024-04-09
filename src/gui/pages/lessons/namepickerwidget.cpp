@@ -3,8 +3,8 @@
 #include <QDir>
 #include <QFile>
 #include <QApplication>
-#include "../../../utils/fileutils.h"
-#include "namepickerwidget.h"
+#include "utils/fileutils.h"
+#include "gui/pages/lessons/namepickerwidget.h"
 
 NamePickerWidget::NamePickerWidget(QWidget* parent) : QWidget(parent) {
     QVBoxLayout* layout = new QVBoxLayout(this);
